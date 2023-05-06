@@ -12,10 +12,10 @@ jobs:
      steps:
        - name: 'xecute command'
          env:
-          USER_AGENT: ${{ secrets.USER_AGENT }}
+          USER_AGENT: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'
           COOKIE: ${{ secrets.COOKIE }}
           #DZ论坛的防攻击机制验证码
           FORMHASH: ${{ secrets.FORMHASH }}
          # 向站点发送 GET 请求
          run:                                 
-          curl -A "$USER_AGENT" -b "$COOKIE" "https://bbs.binmt.cc/k_misign-sign.html?operation=qiandao&format=button&formhash=$FORMHASH&inajax=1&ajaxtarget=midaben_sign"
+          curl -A "$USER_AGENT" -b "$COOKIE" "https://www.3swg.com/k_misign-sign.html?operation=qiandao&format=button&formhash=$FORMHASH&inajax=1&ajaxtarget=midaben_sign"
