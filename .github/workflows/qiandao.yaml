@@ -18,7 +18,7 @@ jobs:
           FORMHASH: ${{ secrets.FORMHASH_B }}
          # 向站点发送 GET 请求
          run:                                 
-          curl -A "$USER_AGENT" -b "$COOKIE" "https://www.3swg.com/dsu_paulsign-sign.html?id=dsu_paulsign:sing&operation=qiandao&infloat=1&sign_as=1&format=button&formhash=$FORMHASH&inajax=1&ajaxtarget=midaben_sign"
+          curl -A "$USER_AGENT" -b "$COOKIE" "https://www.3swg.com/plugin.php?id=dsu_paulsign:sing&operation=qiandao&infloat=1&sign_as=1&inajax=1"
           
   curl-discuz-B:
      runs-on: ubuntu-latest
@@ -31,4 +31,4 @@ jobs:
           FORMHASH: ${{ secrets.FORMHASH_A }}
          # 向站点发送 GET 请求
          run:                                 
-          curl -A "$USER_AGENT" -b "$COOKIE" "https://www.3swg.com/dsu_paulsign-sign.html?id=dsu_paulsign:sing&operation=qiandao&infloat=1&sign_as=1&format=button&formhash=$FORMHASH&inajax=1&ajaxtarget=midaben_sign"
+          curl -A "$USER_AGENT" -b "$COOKIE" "https://www.3swg.com/plugin.php?id=dsu_paulsign:sing&operation=qiandao&infloat=1&sign_as=1&inajax=1"
